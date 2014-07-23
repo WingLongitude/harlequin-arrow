@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Swagger - Root Resources Listing
+GET     /api-docs               controllers.ApiHelpController.getResources
+
+GET     /api-docs/resource      controllers.ApiHelpController.getResource(path = "/resource")
+POST    /resource               @controllers.ResourceApiController.addResource
+DELETE  /resource/:url          @controllers.ResourceApiController.deleteResourceByURL(url)
+GET     /resource/:url          @controllers.ResourceApiController.getResourceByURL(url)
+GET     /resource               @controllers.ResourceApiController.getResources
+PUT     /resource               @controllers.ResourceApiController.updateResource
+
+# Home page
+GET     /                       controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file           controllers.Assets.at(path="/public", file)
