@@ -3,6 +3,7 @@
 # ~~~~
 
 # Swagger - Root Resources Listing
+OPTIONS	/*all										@controllers.BaseApiController.preflight(all: String)
 GET     /api-docs               controllers.ApiHelpController.getResources
 
 GET     /api-docs/resource      controllers.ApiHelpController.getResource(path = "/resource")

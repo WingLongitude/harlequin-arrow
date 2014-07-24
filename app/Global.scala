@@ -1,9 +1,11 @@
 import play.api._
-
 import com.wordnik.swagger.config._
 import com.wordnik.swagger.model._
+import play.api.mvc.EssentialAction
+import play.api.mvc.WithFilters
+import play.filters.gzip.GzipFilter
 
-object Global extends GlobalSettings {
+object Global extends WithFilters(CorsFilter, new GzipFilter()) {
 	// General info about app API
 	val info = ApiInfo(
 		title = "SIB Colombia Indexer",
