@@ -5,7 +5,7 @@ import play.api.mvc.EssentialAction
 import play.api.mvc.WithFilters
 import play.filters.gzip.GzipFilter
 
-object Global extends WithFilters(CorsFilter, new GzipFilter()) {
+object Global extends WithFilters(CorsFilter, LoggingFilter, new GzipFilter()) {
 	// General info about app API
 	val info = ApiInfo(
 		title = "SIB Colombia Indexer",
