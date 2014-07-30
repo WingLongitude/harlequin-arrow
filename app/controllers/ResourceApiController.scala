@@ -1,8 +1,6 @@
 package controllers
 
 import com.wordnik.swagger.annotations._
-import play.api.mvc.Action
-import com.wordnik.swagger.core.util.ScalaJsonUtil
 import models.Resource
 import play.api.db.slick._
 import play.api.db.slick.Config.driver.simple._
@@ -10,8 +8,6 @@ import api._
 import play.api.mvc._
 import javax.ws.rs.{QueryParam, PathParam}
 import play.api.libs.json.Json
-import play.api.libs.json.Json._
-import java.sql.SQLException
 import org.slf4j.LoggerFactory
 
 /**
@@ -34,7 +30,7 @@ class ResourceApiController extends BaseApiController {
 	
 	@ApiOperation(value = "Find resource by URL", 
 			notes = "Returns a resource", 
-			response = classOf[models.Resource], 
+			response = classOf[models.Resource],
 			httpMethod = "GET", 
 			nickname = "findResourceByURL")
   @ApiResponses(Array(

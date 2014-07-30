@@ -3,7 +3,6 @@ package controllers
 import util.RestResourceUtil
 import play.api.mvc._
 import com.wordnik.swagger.core.util.ScalaJsonUtil
-import java.io.StringWriter
 
 class BaseApiController extends Controller with RestResourceUtil {
 	// Util methods for JSON data rendering
@@ -36,7 +35,7 @@ class BaseApiController extends Controller with RestResourceUtil {
 	def preflight(all: String) = Action {
 		Ok("").withHeaders("Access-Control-Allow-Origin" -> "*",
 			"Allow" -> "*",
-			"Access-Control-Allow-Methods" -> "POST, GET, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Methods" -> "POST, GET, PUT, DELETE, OPTIONS",
 			"Access-Control-Allow-Headers" -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
   }
 }

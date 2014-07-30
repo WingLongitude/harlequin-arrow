@@ -1,5 +1,8 @@
 package util
 
+import java.text.SimpleDateFormat
+import java.util.Date
+
 /**
  *  Copyright 2012 Wordnik, Inc.
  *
@@ -16,12 +19,9 @@ package util
  *  limitations under the License.
  */
 
-import java.text.SimpleDateFormat
-import java.util.Date
-
 trait RestResourceUtil {
 	def getInt(minVal: Int, maxVal: Int, defaultValue: Int, inputString: String): Int = {
-		var output: Int = defaultValue;
+		var output: Int = defaultValue
 		try output = inputString.toInt
 		catch {
 			case _: Throwable => output = defaultValue
@@ -34,7 +34,7 @@ trait RestResourceUtil {
 	}
 
 	def getLong(minVal: Long, maxVal: Long, defaultValue: Long, inputString: String): Long = {
-		var output: Long = defaultValue;
+		var output: Long = defaultValue
 		try output = inputString.toLong
 		catch {
 			case _: Throwable => output = defaultValue
@@ -47,7 +47,7 @@ trait RestResourceUtil {
 	}
 
 	def getDouble(minVal: Double, maxVal: Double, defaultValue: Double, inputString: String): Double = {
-		var output: Double = defaultValue;
+		var output: Double = defaultValue
 		try output = inputString.toDouble
 		catch {
 			case _: Throwable => output = defaultValue

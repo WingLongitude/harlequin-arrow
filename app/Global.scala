@@ -1,7 +1,5 @@
-import play.api._
 import com.wordnik.swagger.config._
 import com.wordnik.swagger.model._
-import play.api.mvc.EssentialAction
 import play.api.mvc.WithFilters
 import play.filters.gzip.GzipFilter
 

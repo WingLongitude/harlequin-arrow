@@ -1,6 +1,8 @@
 package value
 
-import javax.xml.bind.annotation._
+import javax.xml.bind.annotation.XmlRootElement
+import javax.xml.bind.annotation.XmlElement
+import javax.xml.bind.annotation.XmlTransient
 
 object ApiResponse {
 	val ERROR = 1

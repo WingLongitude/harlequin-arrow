@@ -1,11 +1,7 @@
 package api
 
-import scala.collection.mutable.ListBuffer
 import models.Resource
 import play.api.db.slick.Config.driver.simple._
-
-import play.api.libs.json._
-import play.api.libs.functional.syntax._
 
 /**
  * Table mapping for resource data
