@@ -4,6 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS resource (
   url VARCHAR(255) not null,
+  name VARCHAR(255),
   user VARCHAR(255),
   organizationUUID VARCHAR(255),
   country VARCHAR(255),
